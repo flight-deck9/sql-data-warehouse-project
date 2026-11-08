@@ -36,12 +36,13 @@ create table silver.crm_sales_details (
 
 create table silver.crm_prd_info (
     prd_id int,
+    cat_id nvarchar(50);
     prd_key nvarchar(50),
     prd_nm nvarchar(50),
     prd_cost int,
     prd_line nvarchar(50),
-    prd_start_dt datetime,
-    prd_end_dt datetime,
+    prd_start_dt date,
+    prd_end_dt date,
     dwh_create_date Datetime2 default getdate()
 );
 
