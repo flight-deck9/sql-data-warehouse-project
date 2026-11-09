@@ -1,10 +1,10 @@
-============================================================
+-- ============================================================
 -- CLEANING SCRIPT FOR SILVER LAYER: silver.erp_loc_a101 DATA TRANSFORMATION
 -- Source: bronze.erp_loc_a101
 -- Target: silver.silver.erp_loc_a101
 -- Purpose: Deduplicate and standardize customer records
 
-============================================================
+-- ============================================================
 
 
 print '>> Truncating Table: silver.erp_loc_a101';
