@@ -1,10 +1,10 @@
-============================================================
+-- ============================================================
 -- CLEANING SCRIPT FOR SILVER LAYER: silver.erp_px_cat_g1v2 DATA TRANSFORMATION
 -- Source: bronze.erp_px_cat_g1v2
 -- Target: silver.silver.erp_px_cat_g1v2
 -- Purpose: Deduplicate and standardize customer records
 
-============================================================
+-- ============================================================
 
 
 print '>> Truncating Table: silver.erp_px_cat_g1v2';
