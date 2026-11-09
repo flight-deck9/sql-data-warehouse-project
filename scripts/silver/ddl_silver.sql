@@ -3,7 +3,13 @@
 DDL Script for silver tables
 ===========================
 Purpose: 
-  This creates the tables in the silver schema
+  This creates the tables in the silver schema... 
+
+I left out, but if you want to adjust table structure upon each load, 
+just add before each table with table name:
+
+If Object_id('silver.crm_cust_info', 'U') is not null
+  drop table silver.crm_cust_info;
 
 */
 
