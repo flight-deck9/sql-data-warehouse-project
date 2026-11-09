@@ -54,7 +54,7 @@ Begin
     cst_key,
     cst_firstname,
     cst_lastname,
-    cst_material_status,
+    cst_marital_status,
     cst_gndr,
     cst_create_date
     )
@@ -64,10 +64,10 @@ Begin
     cst_key,
     trim(cst_firstname) as cst_firstname,
     trim(cst_lastname) as cst_lastname,
-    CASE when UPPER(trim(cst_material_status)) = 'S' then 'Single'
-        when Upper(trim(cst_material_status)) = 'M' then 'Married'
+    CASE when UPPER(trim(cst_marital_status)) = 'S' then 'Single'
+        when Upper(trim(cst_marital_status)) = 'M' then 'Married'
         else 'n/a'
-    end cst_material_status,
+    end cst_marital_status,
     CASE when UPPER(trim(cst_gndr)) = 'F' then 'Female'
         when Upper(trim(cst_gndr)) = 'M' then 'Male'
         else 'n/a'
