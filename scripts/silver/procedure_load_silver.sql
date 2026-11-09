@@ -216,8 +216,8 @@ Begin
         else bdate
     end as bdate,
 
-    case when upper(trim(gen)) in ('F', 'FEMALE') then 'Female'
-        when upper(trim(gen)) in ('M', 'MALE') then 'Male'
+    case when upper(trim(gen)) in ('F', 'FEMALE', 'Female') then 'Female'
+        when upper(trim(gen)) in ('M', 'MALE', 'Male') then 'Male'
         else 'n/a'
     end as gen
 
