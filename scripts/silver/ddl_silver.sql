@@ -5,16 +5,13 @@ DDL Script for silver tables
 Purpose: 
   This creates the tables in the silver schema... 
 
-I left out, but if you want to adjust table structure upon each load, 
-just add before each table with table name:
-
-If Object_id('silver.crm_cust_info', 'U') is not null
-  drop table silver.crm_cust_info;
+This drops each table and makes a new one.
 
 */
 
 
-
+If Object_id('silver.crm_cust_info', 'U') is not null
+  drop table silver.crm_cust_info;
 
 create table silver.crm_cust_info (
     cst_id INT,
@@ -26,6 +23,10 @@ create table silver.crm_cust_info (
     cst_create_date date,
     dwh_create_date Datetime2 default getdate()
 );
+
+
+If Object_id('silver.crm_sales_details', 'U') is not null
+  drop table silver.crm_sales_details;
 
 create table silver.crm_sales_details (
     sls_ord_num nvarchar(50),
@@ -40,6 +41,10 @@ create table silver.crm_sales_details (
     dwh_create_date Datetime2 default getdate()
 );
 
+
+If Object_id('silver.crm_prd_info', 'U') is not null
+  drop table silver.crm_prd_info;
+
 create table silver.crm_prd_info (
     prd_id int,
     cat_id nvarchar(50);
@@ -52,12 +57,20 @@ create table silver.crm_prd_info (
     dwh_create_date Datetime2 default getdate()
 );
 
+
+If Object_id('silver.erp_loc_a101', 'U') is not null
+  drop table silver.erp_loc_a101;
+
 create table silver.erp_loc_a101 (
     cid nvarchar(50),
     cntry nvarchar(50),
     dwh_create_date Datetime2 default getdate()
 
 );
+
+
+If Object_id('silver.erp_cust_az12', 'U') is not null
+  drop table silver.erp_cust_az12;
 
 create table silver.erp_cust_az12 (
     cid nvarchar(50),
@@ -66,6 +79,10 @@ create table silver.erp_cust_az12 (
     dwh_create_date Datetime2 default getdate()
 
 );
+
+
+If Object_id('silver.erp_px_cat_g1v2', 'U') is not null
+  drop table silver.erp_px_cat_g1v2;
 
 create table silver.erp_px_cat_g1v2 (
     id nvarchar(50),
