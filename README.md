@@ -1,4 +1,4 @@
-# Data Warehouse and Analytics Refresher Project 11/06
+# Data Warehouse and Analytics Refresher Project 11/05
 
 This is a personal refresher project that I did to refamiliarize myself with building a modern data warehouse with SQL Server, including ELT processes, data modeling, and analytics.
 
