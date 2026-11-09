@@ -1,4 +1,4 @@
-============================================================
+-- ============================================================
 -- CLEANING SCRIPT FOR SILVER LAYER: PRODUCT INFO DATA TRANSFORMATION
 -- Source: bronze.crm_prd_info
 -- Target: silver.crm_prd_info
@@ -9,7 +9,7 @@
 -- I ended up taking the table including start date and rebuilding the prd_end_dt from prior start date.
 -- The logic I used is the end date of a record comes from the start date of new record,
 -- and the start date used for that end date will be subtracted by 1 day to avoid overlap with new start date.
-============================================================
+-- ============================================================
 
 print '>> Truncating Table: silver.crm_prd_info';
 truncate table silver.crm_prd_info;
