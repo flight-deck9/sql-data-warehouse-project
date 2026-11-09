@@ -6,9 +6,9 @@
 
 
 
---this page is for the crm customer info table, this takes the data from bronze.crm_cust_info
---and performs adjustments to help clean the incoming info. 
---I have labeled each transformation with a t# in terms of order I did for clarification
+-- this page is for the crm customer info table, this takes the data from bronze.crm_cust_info
+-- and performs adjustments to help clean the incoming info. 
+-- I have labeled each transformation with a t# in terms of order I did for clarification
 -- ============================================================
 print '>> Truncating Table: silver.crm_cust_info';
 truncate table silver.crm_cust_info;
