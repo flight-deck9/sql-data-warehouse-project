@@ -129,3 +129,10 @@ from bronze.erp_cust_az12
 where bdate < '1924-01-01' or bdate > getdate();
 
 
+-- foreign key integrity check (dimensions)
+select * 
+from gold.fact_sales f
+left join gold.dim_customers c
+on c.customer_key = f.customer_key
+where c.customer_key is null
+
