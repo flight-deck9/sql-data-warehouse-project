@@ -51,6 +51,6 @@ select distinct
 cat 
 from bronze.erp_px_cat_g1v2
 
--- checked subcat and maintenance as well
+-- check subcat and maintenance as well
 */
 
