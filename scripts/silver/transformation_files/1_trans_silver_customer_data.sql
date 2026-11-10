@@ -20,7 +20,7 @@ cst_id,
 cst_key,
 cst_firstname,
 cst_lastname,
-cst_material_status,
+cst_marital_status,
 cst_gndr,
 cst_create_date
 
@@ -41,10 +41,10 @@ trim(cst_lastname) as cst_lastname,
 -- T4: Standardize marital status into something understandable
 -- Trimed whitespace and accounted for lowercase, map unknown values to n/a
 --cst_material_status,
-CASE when UPPER(trim(cst_material_status)) = 'S' then 'Single'
-     when Upper(trim(cst_material_status)) = 'M' then 'Married'
+CASE when UPPER(trim(cst_marital_status)) = 'S' then 'Single'
+     when Upper(trim(cst_marital_status)) = 'M' then 'Married'
      else 'n/a'
-end cst_material_status,
+end cst_marital_status,
 
 -- T4: Standardize gender into male or female
 -- Trimed whitespace and accounted for lowercase, map unknown values to n/a
@@ -125,7 +125,7 @@ cst_id,
 cst_key,
 trim(cst_firstname) as cst_firstname,
 trim(cst_lastname) as cst_lastname,
-sct_material_status.
+cst_marital_status.
 cst_gndr,
 cst_create_date;
 */
