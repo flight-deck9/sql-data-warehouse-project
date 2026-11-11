@@ -1,0 +1,47 @@
+-- ============================================================
+-- CLEANING SCRIPT FOR SILVER LAYER: erp_cust_az12 DATA TRANSFORMATION
+-- Source: bronze.erp_cust_az12
+-- Target: silver.erp_cust_az12
+-- Purpose: Deduplicate and standardize customer records
+
+-- ============================================================
+
+
+-- need to remove "NAS" prefix from cid to be able to connect with other table
+
+print '>> Truncating Table: silver.erp_cust_az12 ';
+truncate table silver.erp_cust_az12 ;
+print '>> Inserting Data Into: silver.erp_cust_az12 ';
+
+
+INSERT INTO silver.erp_cust_az12 (
+
+    cid,
+    bdate,
+    gen
+
+)
+
+
+select 
+
+-- need to remove "NAS" prefix from cid to be able to connect with other table
+case when cid like 'NAS%' then substring(cid, 4, len(cid))
+    else cid
+end as cid,
+
+-- need to remove people born in the future
+--bdate,
+case when bdate > getdate() then null
+     else bdate
+end as bdate,
+
+--gen
+case when upper(trim(gen)) in ('F', 'FEMALE') then 'Female'
+     when upper(trim(gen)) in ('M', 'MALE') then 'Male'
+     else 'n/a'
+end as gen
+
+
+
+from bronze.erp_cust_az12;
