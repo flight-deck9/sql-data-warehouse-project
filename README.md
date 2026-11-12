@@ -1,6 +1,6 @@
-# Data Warehouse and Analytics Refresher Project 11/05
+# SQL Server Data Warehouse | Technical Refresher Project 11/05
 
-This is a personal refresher project that I did to refamiliarize myself with building a modern data warehouse with SQL Server, including ELT processes, data modeling, and analytics.
+This is a hands-on technical refresher project I completed to strengthen my skills in SQL Server, data warehousing, ELT processes, data modeling, and analytics.
 
 # Project Requirements and Specs
 
@@ -10,27 +10,31 @@ This is a personal refresher project that I did to refamiliarize myself with bui
   enabling analytical reporting that could be used to help answer potential business questions.
 
 ### Specifications
- - **Data Sources**: Import data from internet from two source systems (ERP & CRM) provided as CSV files.
+ - **Data Sources**: Import data from two source systems (ERP & CRM) provided as CSV files.
  - **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
  - **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
  - **Scope**: Only focus on the latest dataset; historization of data won't be necessary for refresher.
- - **Documentation**: Provide clear documentation of the data model to support both stateholders and analytical teams.
+ - **Documentation**: Provide clear documentation of the data model to support both stakeholders and analytical teams.
 
 ---
 
 ## BI: Analytics & Reporting (DA)
 
 ### Objective
-Develop SQL- based analytics to deliver insights:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+## BI: Analytics & Reporting
 
+### Potential Analytical Use Cases
+
+The data warehouse is designed to support SQL-based analytics and reporting, including:
+
+- **Customer Behavior:** Analyze customer purchasing patterns and trends.
+- **Product Performance:** Evaluate product sales and performance.
+- **Sales Trends:** Identify sales patterns and changes over time.
 ---
 
 ## License
 
-This is a personal project and will be licensed under the MIT License. Free to use, modify, and share with proper attribution.
+This is a personal project and is licensed under the MIT License. Free to use, modify, and share with proper attribution.
 
 ---
 
