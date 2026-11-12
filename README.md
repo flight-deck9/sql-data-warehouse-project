@@ -1,6 +1,6 @@
 # SQL Server Data Warehouse | Technical Refresher Project 11/05
 
-This is a hands-on technical refresher project I completed to strengthen my skills in SQL Server, data warehousing, ELT processes, data modeling, and analytics.
+This is a hands-on technical refresher project using educational data warehousing documentation to strengthen my skills in SQL Server, ELT processes, data modeling, and analytics.
 
 # Project Requirements and Specs
 
