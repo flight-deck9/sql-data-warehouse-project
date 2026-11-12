@@ -18,9 +18,6 @@ This is a hands-on technical refresher project I completed to strengthen my skil
 
 ---
 
-## BI: Analytics & Reporting (DA)
-
-### Objective
 ## BI: Analytics & Reporting
 
 ### Potential Analytical Use Cases
